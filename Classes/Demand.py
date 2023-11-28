@@ -32,7 +32,7 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-TOKEN = "6647924449:AAECe340pjpMWnoZFFORaR5TM4DsfdmiZm4"
+TOKEN = os.environ("TOKEN")
 bot = telebot.TeleBot(TOKEN)
 helper = Helper(bot, logger, UserSessions)
 
@@ -54,7 +54,7 @@ class Demand():
 
         query1 = """
                 select ISYERI_ADI,GOREV_YERI_ADI,ADI_SOYADI,cep_telefonu 
-                from probbys.vew_prs_sicil_ozluk_bilgileri 
+                from probs.vew_bilgileri 
                 where KURUM_ID=2 and FIILI_GOREVI_KODU=2975 and ayrildi=0
                 order by ISYERI_ADI
                 """
@@ -150,7 +150,7 @@ class Demand():
 
         # send the post request
         response = requests.post(
-            'https://intrarest.izbb.net/MessageWAPI/MessageCoreWAPI/SendOTPSMS',
+            
             headers = headers,
             data = json.dumps(payload)
         )
