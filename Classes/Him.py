@@ -35,11 +35,11 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-TOKEN = "6647924449:AAECe340pjpMWnoZFFORaR5TM4DsfdmiZm4"
+TOKEN = os.environ("TOKEN")
 bot = telebot.TeleBot(TOKEN)
 helper = Helper(bot, logger, UserSessions)
 
-openai.api_key = "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"
+openai.api_key = os.environ("openaitoken")
 
 class Him():
 
