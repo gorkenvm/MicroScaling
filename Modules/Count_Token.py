@@ -12,16 +12,16 @@ from Modules.direct import Gpt_Maintopic_Analysis
 
 def connect():
     dsn = cx_Oracle.makedsn(
-        host='ibbvtys-scan',  # Replace with the hostname or IP address of the Oracle server *** 19C 'ibbdb-scan'
-        port='1521',      # Replace with the port number of the Oracle server
-        service_name='ibbdb'  # Replace with the service name or SID of the Oracle database *** 19C ibbdb
+        host='_______',  # Replace with the hostname or IP address of the Oracle server *** 19C 'ibbdb-scan'
+        port='_______',      # Replace with the port number of the Oracle server
+        service_name='_______'  # Replace with the service name or SID of the Oracle database *** 19C ibbdb
     )
 
     connection = cx_Oracle.connect(
-        user='BIMVERIANALIZ',      # Replace with your Oracle username
-        password='Dasci112',  # Replace with your Oracle password
+        user='_______',      # Replace with your Oracle username
+        password='_______',  # Replace with your Oracle password
         dsn=dsn,
-        encoding='UTF-8'
+        encoding='_______'
     )
     return connection
 
