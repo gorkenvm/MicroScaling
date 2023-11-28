@@ -48,8 +48,8 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-TOKEN = "6647924449:AAECe340pjpMWnoZFFORaR5TM4DsfdmiZm4"
-bot = telebot.TeleBot(TOKEN)
+TOKEN = os.environ("TOKEN")
+bot = telebot.TeleBot(os.environ("TOKEN"))
 helper = Helper(bot, logger, UserSessions)
 
 #_____________________________________________#
