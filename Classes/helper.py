@@ -18,10 +18,8 @@ except:
         f.write("1569925904")
     admins = ['1569925904'] # default admin id
 
-# erenizmirbot 6647924449:AAECe340pjpMWnoZFFORaR5TM4DsfdmiZm4
-# microizmir 6472809175:AAEffcb3Y0cVkDN2951yea8M4Zx6QiLIpq4
-# izbblog_bot 6622880820:AAGfl9vuw9habaF0ObK23gHOeoO2rh76JK0
-TOKEN = "6622880820:AAGfl9vuw9habaF0ObK23gHOeoO2rh76JK0"
+
+TOKEN = os.environ("TOKEN")
 
 admin_bot = telebot.TeleBot(TOKEN)
 
